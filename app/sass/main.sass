@@ -1,0 +1,459 @@
+//VARS
+$main: #367DFF
+
+body
+    overflow-x: hidden
+//HEADER
+header
+    position: fixed
+    z-index: 3
+    width: 100vw
+    border-bottom: 2px solid #000
+
+.header_logo
+    font-size: 32px
+    font-weight: 600
+
+.header_navigation
+    background: $main
+
+.header_navigation_link
+    font-size: 20px
+    font-weight: 500
+    position: relative
+    text-decoration: none
+    &::before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 5px
+        width: 0
+        height: 2px
+        background-color: #000
+        transition: width 0.35s
+    &:hover
+        margin-top: -2px
+        &::before
+            width: 100%
+//MAIN
+//section_headerPage
+.section_headerpage
+    position: relative
+    height: 100vh
+    width: 100vw
+    background-image: url('../images/src/mainBG.jpg')
+    background-size: cover
+    background-position: center
+
+.headerpage_container
+    width: 100%
+    z-index: 2
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%)
+
+.main_leftside, .main_rightside
+    width: 50%
+
+.main_leftside
+    h3
+        line-height: 0
+        overflow-wrap: break-word
+    h1
+        font-size: 68px
+    p
+        font-size: 28px
+
+.main_rightside_btn
+    display: flex
+    justify-content: center
+    align-items: center
+    color: white
+    text-decoration: none
+    font-size: 22px
+    font-weight: 500
+    margin: 0 auto
+    position: relative
+    top: 50%
+    transition: 0.5s
+    border-radius: 32px
+    border: none
+    width: 46%
+    height: 26%
+    background: red
+    &:hover
+        transform: translate(0,-3px)
+        box-shadow: 0 20px 40px 8px rgba(246,11,42,0.7)
+        color: white
+    &:active
+        margin-top: 5px
+
+//section_inforamtion
+.section_inforamtion
+    width: 100%
+    height: auto
+    h3
+        text-align: center
+        font-size: 38px
+        margin-top: 22px
+
+.section_inforamtion_addiction
+    font-size: 22px
+    margin-top: 30px
+
+.section_inforamtion_addiction_btn
+    color: inherit
+    text-decoration: none
+    font-size: 20px
+    font-weight: 500
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    border-radius: 12px
+    background: $main
+    width: 30%
+    height: 50px
+    margin-top: 45px
+    border: 2px solid $main
+    transition: 0.5s
+    margin-bottom: 32px
+    &:hover
+        background: rgba(0, 0, 0, 0)
+
+//section_inforamtion_treatment
+.section_inforamtion_treatment
+    width: 100vw
+    height: auto
+    background: $main
+    margin: 0
+    h3
+        text-align: center
+        font-size: 38px
+
+.section_inforamtion_treatment_content
+    margin-top: 32px
+    padding-bottom: 48px
+
+.section_inforamtion_treatment_content_list
+    width: 45%
+    font-size: 19px
+    font-weight: 500
+
+.section_inforamtion_treatment_content_img
+    width: 50%
+    height: 50%
+
+//section contacts
+#contacts
+    padding-top: 55px
+    margin-top: -55px
+    -webkit-background-clip: content-box
+    background-clip: content-box
+
+.section_contacts
+    width: 100vw
+    height: auto
+    text-align: center
+    h3
+        font-size: 38px
+        margin-top: 32px
+        margin-bottom: 32px
+    p
+        font-size: 20px
+        font-weight: 500
+        width: 70%
+        display: flex
+        margin: 0 auto
+
+.section_contacts_list
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin-top: 16px
+    margin-bottom: 16px
+    a
+        color: #000
+        font-weight: 500
+        font-size: 19px
+        text-decoration: none
+        width: 30%
+        margin: 0 auto
+    img
+        width: 30px
+        height: 30px
+        margin-right: 8px
+
+//section price
+#prices
+    padding-top: 55px
+    margin-top: -55px
+    -webkit-background-clip: content-box
+    background-clip: content-box
+
+.section_price
+    margin-top: 38px
+    width: 100vw
+    height: auto
+    background: $main
+    p
+        margin: 0
+    h3
+        padding-top: 32px
+        text-align: center
+        font-size: 38px
+
+.section_price_accordeonlist
+    text-align: center
+    margin-top: 32px
+    &:last-child
+        padding-bottom: 48px
+    details
+        margin-top: 32px
+        background: white
+        border: 2px solid black
+        summary
+            font-size: 32px
+            font-weight: 500
+        div
+            border-top: 2px solid black
+        ul
+            width: 90%
+            margin: 0 auto
+            list-style-type: none
+            line-height: 2.3em
+            margin-top: 16px
+            font-size: 20px
+            li
+                width: 100%
+                display: flex
+                justify-content: space-between
+                font-weight: 500
+                border-top: 1px solid black
+                margin: 0 -10px
+            p
+                width: auto
+                margin: 0 10px
+
+//FOOTER
+footer
+    width: 100vw
+    height: auto
+    h4
+        font-size: 28px
+
+.footer_col
+    display: flex
+    margin-top: 32px
+
+.slider-container
+    position: relative
+    width: 80%
+    height: auto
+    overflow: hidden
+
+.slider
+    display: flex
+    transition: transform 0.5s ease-in-out
+
+.slider img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.prev-button,
+.next-button
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 50px
+    height: 50px
+    background-color: transparent
+    border: none
+    font-size: 32px
+    font-weight: 700
+    color: $main
+
+.prev-button
+    left: -15px
+
+.next-button
+    right: -15px
+
+.footer_ribtBox
+    display: flex
+    flex-direction: column
+    a
+        color: black
+        text-decoration: none
+        img
+            margin-right: 4px
+    a,p
+        font-size: 20px
+        margin-top: 8px
+        line-height: 1.5rem
+    span
+        color: grey
+
+.whatsAppImg
+    width: 30px
+    height: 30px
+
+//MEDIA QUERY
+//MEDIA MAIN PAGE
+@media only screen and (max-width : 1400px)
+    .main_leftside
+        h1
+            font-size: 64px
+        p
+            font-size: 24px
+
+@media only screen and (max-width : 1200px)
+    .main_leftside
+        h1
+            font-size: 60px
+        p
+            font-size: 22px
+    .main_rightside_btn
+        font-size: 20px
+        width: 55%
+        height: 28%
+
+@media only screen and (max-width : 992px)
+    .main_leftside
+        width: 80%
+        h1
+            font-size: 54px
+        p
+            font-size: 18px
+    .main_rightside_btn
+        font-size: 20px
+        width: 85%
+        height: 30%
+
+@media only screen and (max-width : 768px)
+    .headerpage_container
+        flex-direction: column
+        align-items: center
+        text-align: center
+        top: 45%
+        height: auto
+    .main_leftside
+        width: 100%
+        h1
+            font-size: 60px
+        p
+            font-size: 24px
+    .main_rightside
+        width: 100%
+        height: 100%
+    .main_rightside_btn
+        font-size: 22px
+        width: 60%
+        height: 55px
+
+//MEDIA inforamtion
+@media only screen and (max-width : 1400px)
+    .section_inforamtion_addiction_btn
+        font-size: 18px
+        width: 35%
+
+@media only screen and (max-width : 1200px)
+    .section_inforamtion_addiction_btn
+        font-size: 16px
+        width: 35%
+
+@media only screen and (max-width : 992px)
+    .section_inforamtion
+        height: auto
+    .section_inforamtion_addiction_btn
+        font-size: 16px
+        width: 45%
+        height: 60px
+        margin-bottom: 64px
+
+@media only screen and (max-width : 768px)
+    .section_inforamtion_addiction_btn
+        width: 60%
+
+@media only screen and (max-width : 540px)
+    .section_inforamtion_addiction_btn
+        width: auto
+
+//MEDIA treatment
+@media only screen and (max-width : 1200px)
+    .section_inforamtion_treatment
+        margin-top: 48px
+    .section_inforamtion_treatment_content_list
+        font-size: 17px
+
+@media only screen and (max-width : 992px)
+    .section_inforamtion_treatment_content
+        flex-direction: column-reverse
+        align-items: center
+        width: 100%
+    .section_inforamtion_treatment_content_img
+        width: 100%
+        height: 100%
+        margin-bottom: 22px
+    .section_inforamtion_treatment_content_list
+        width: 100%
+        font-size: 20px
+
+@media only screen and (max-width : 768px)
+    .section_inforamtion_treatment_content_list
+        font-size: 19px
+
+//MEDIA contacts
+@media only screen and (max-width : 992px)
+    .section_contacts
+        p
+            width: 100%
+    .section_contacts_list
+        a
+            width: 40%
+@media only screen and (max-width : 768px)
+    .section_contacts_list
+        a
+            width: auto
+
+//MEDIA price
+@media only screen and (max-width : 1200px)
+    details
+        ul
+            li
+                font-size: 17px
+
+@media only screen and (max-width : 992px)
+    .section_price_accordeonlist
+        details
+            summary
+                font-size: 26px
+            ul
+                li
+                    font-size: 12px
+
+@media only screen and (max-width : 768px)
+    .section_price_accordeonlist
+        details
+            summary
+                font-size: 26px
+            ul
+                li
+                    font-size: 11px
+
+//media footer
+@media only screen and (max-width : 992px)
+    h4
+        margin-top: 32px
+    .footer_col
+        flex-direction: column
+        align-items: center
+        text-align: center
+    .footer_box
+        width: 70%
+        margin: 0 auto
+        .slider-container
+            margin: 0 auto
